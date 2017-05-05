@@ -13,6 +13,7 @@ resources:
     type: pull-request
     source:
       repo: hellofresh/concourse-tutorial
+      access-token: 89f1553d9220157ed1d4f4fa7a7d8b707dd2e6f7
 
 jobs:
   - name: PR unit testing
