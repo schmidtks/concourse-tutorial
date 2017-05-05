@@ -4,7 +4,7 @@ resources:
     type: git
     branch: ci
     source:
-      uri: https://github.com/hellofresh/concourse-tutorial.git
+      uri: https://github.com/schmidtks/concourse-tutorial
 
 jobs:
   - name: Test
