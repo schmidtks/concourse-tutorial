@@ -3,7 +3,7 @@ resources:
   - name: super-app
     type: git
     source:
-      uri: https://github.com/hellofresh/concourse-tutorial.git
+      uri: https://github.com/schmidtks/concourse-tutorial
       branch: ci
 
 jobs:
@@ -40,13 +40,13 @@ jobs:
         inputs:
           - name: super-app
 
-  - name: Building & integeration testing
+  - name: Building & Integration
     plan:
     - get: super-app
       passed: ["Testing"]
       trigger: true
 
-    - task: build & integeration test
+    - task: build & integration tests
       config:
         platform: linux
         image_resource:

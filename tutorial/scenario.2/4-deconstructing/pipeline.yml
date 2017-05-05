@@ -3,7 +3,7 @@ resources:
   - name: super-app
     type: git
     source:
-      uri: https://github.com/hellofresh/concourse-tutorial.git
+      uri: https://github.com/schmidtks/concourse-tutorial
       branch: ci
 
 jobs:
@@ -19,7 +19,7 @@ jobs:
       - task: unit
         file: super-app/tutorial/scenario.2/4-deconstructing/tasks/unit.yml
 
-  - name: Building & integeration testing
+  - name: Building & Integration
     plan:
     - get: super-app
       passed: ["Testing"]
@@ -28,5 +28,5 @@ jobs:
     - task: build
       file: super-app/tutorial/scenario.2/4-deconstructing/tasks/build.yml
 
-    - task: integeration test
+    - task: integration test
       file: super-app/tutorial/scenario.2/4-deconstructing/tasks/integeration.yml
